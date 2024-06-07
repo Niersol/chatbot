@@ -22,7 +22,7 @@ class ChatBotView(APIView):
         if chat_type != 'text' and isinstance(chat_history,Response):
             return chat_history 
         
-        client = OpenAI(api_key="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")
+        client = OpenAI(api_key="")
 
         if chat_type == 'text':
             serializer = ChatHistorySerializer(data = request.data)
